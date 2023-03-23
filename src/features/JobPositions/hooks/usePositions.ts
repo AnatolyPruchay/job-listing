@@ -7,5 +7,5 @@ import { selectFilters } from '../../FilterPanel/model/filterSlice';
 
 export const usePositions = () => {
   const currentFilters = useSelector(selectFilters);
-  return  useSelector((state: RootState) => selectVisiblePositions(state, currentFilters));
+  return useSelector((state: RootState) => selectVisiblePositions(state, currentFilters));
 }

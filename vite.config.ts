@@ -5,8 +5,13 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // build: {
-  //   minify: 'terser',
-  // },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      output: {
+        comments: false,
+      }
+    }
+  },
   plugins: [react(), linaria(), svgr()],
 })

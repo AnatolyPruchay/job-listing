@@ -7,9 +7,7 @@ export const store = configureStore({
     filters: filterReducer,
     positions: positionReducer,
   },
-  devTools: true,
+  devTools: import.meta.env.DEV,
 });
 
 export type RootState = ReturnType<typeof store.getState>
-
-export type AppDispatch = typeof store.dispatch
